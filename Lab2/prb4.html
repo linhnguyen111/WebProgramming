@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration form</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>LastName</td>
+			<td><input type="text" name="lastname" placeholder ="Nakov"></td>
+		</tr>
+		<tr>
+			<td>First Name</td>
+			<td><input type="text" name="firstname" placeholder="Svetlin"></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><input type="text" name="Address" placeholder="17 Hristo Botev Str floor 3, apt, 12"></td>
+		</tr>
+		<tr>
+			<td>City</td>
+			<td>
+				<table>
+				<tr>
+					<td><input type="text" name="city" placeholder="Kaspichan"></td>
+					<td>State</td>
+					<td><input type="text" name="State" placeholder=""></td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td>Zips/Postal Code</td>
+			<td><input type="text" name="Zips" placeholder="9325"></td>
+		</tr>
+		<tr>
+			<td>Country</td>
+			<td>
+				<!-- <input type="select" name="Country" value="Bulgaria"> -->
+				<select name="Country">
+					<option>Bulgaria</option>
+					<option>Lao</option>
+					<option>VietNam</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Phone(country code, area code, number)</td>
+			<td><label>(+</label>
+				<input type="text" name="Phone" placeholder="359">
+				<label>)</label>
+				<input type="text" name="Phone" placeholder="88">
+				<label>-</label>
+				<input type="text" name="Phone" placeholder="8334343">
+			</td>
+		</tr>
+		<tr>
+			<td>E-mail</td>
+			<td><input type="text" name="email" placeholder="nakov@kaspichan.org"></td>
+		</tr>
+		<tr>
+			<td>Birth date</td>
+			<td><label>Month</label>
+				<input type="text" name="birthday" placeholder="06">
+				<label>Day</label>
+				<input type="text" name="birthday" placeholder="14">
+				<label>Year(4 digit)</label>
+				<input type="text" name="birthday" placeholder="1980">
+			</td>
+		</tr>
+		<tr>
+			<td>Gender</td>
+			<td>
+				<!-- <input type="select" name="Gender" value="Nakov">
+				<object></object> -->
+				<select name="Gender">
+					<option>male</option>
+					<option>female</option>
+					<option>orther</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Starting date</td>
+			<td>
+				<input type="radio" name="Startingday">
+				<label>Spring 2006</label>
+				<input type="radio" name="Startingday">
+				<label>Summer 2006</label>
+			</td>
+		</tr>
+		<tr>
+			<td>Comments/Questions</td>
+			<td><fieldset>Please send me nor informaion about the logging</fieldset>
+				<!-- <input type="text" name="LastName" value="Nakov"> -->
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="submit" value="send">
+				<input type="reset" value="Clear This Form">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

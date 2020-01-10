@@ -3,24 +3,38 @@
 	<head>
 		<title>FORM</title>
 		<meta charset="utf-8">
+		<style type="text/css">
+			p {
+				/*color: blue;*/
+				font-weight: bold; 
+			}
+
+			.le{
+				color: red;
+			}
+			.chan{
+				color: blue;
+			}
+		</style>
 	</head>
 	<body>
 		<form name="form" method="get" action="">
-			<p><label for="email_address">Email address</label></p>
+			<p class="le"><label for="email_address">Email address</label>
+			</p>
 			<input type="email" required="" id="email_address">
-			<p><label for="pass_word">Password</label></p>
+			<p class="chan"><label for="pass_word">Password</label></p>
 			<input type="password" name="pass_word" id="pass_word" >
-			<p><label for="textarea">Example textarea</label></p>
+			<p class="le"><label for="textarea">Example textarea</label></p>
 			<textarea rows="4" name="textarea" id="textarea"></textarea>
 			<br>
-			<p>Gioi tính</p>
+			<p class="chan">Gioi tính</p>
 			<input type="radio" name="gender" value="male">male
 			<br>
 			<input type="radio" name="gender" value="female">female
 			<br>
 			<br>
 			<fieldset>
-				<p>Sở thích</p>
+				<p class="le">Sở thích</p>
 				<input type="checkbox" name="fruit" value="apple">apple
 				<br>
 				<input type="checkbox" name="fruit" value="orange">orange
@@ -33,11 +47,11 @@
 				<input type="submit" value="send">
 				<input type="button" value="Click me">
 			</p>
-			<p><label for="year">Tuổi</label></p>
+			<p class="chan"><label for="year">Tuổi</label></p>
 			<input type="range" id="year" min="0" max="100">
-			<p><label for="number">Số lượng</label></p>
+			<p class="le"><label for="number">Số lượng</label></p>
 			<input type="number" id="number" min="0" max="100">
-			<p>Chọn lựa tỉnh thành</p>
+			<p class="chan">Chọn lựa tỉnh thành</p>
 			<select name="city">
 				<option value="value 1" selected="">Bình Dương</option>
 				<option value="value 2" >Hà Nội</option>
