@@ -1,0 +1,23 @@
+div{
+	border: 3px  solid #f2f2f2;
+	font-family: sans-serif;
+	width: 550px;
+	padding-left: 10px;
+}
+h3{
+	color: #7abcd5;
+}
+.time{
+	color: #c6ccce;
+	font-size: 15px;
+}
+.category{
+	color: #929594;
+}
+ul{
+	color: #555261;
+}
+.author{
+	color: #67bfd6;
+	font-size: 20px;
+}
