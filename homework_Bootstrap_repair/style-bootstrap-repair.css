@@ -1,0 +1,30 @@
+header{
+	background-color: #808080;
+	color: #ffffff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+li{
+	border: 1px ;
+	color: #ffffff;
+	background-color: #33b5e6;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 100px;
+	font-color:#ffffff;
+}
+ul{
+	list-style-type: none;
+	padding-bottom: 1px;
+	padding-left: 10px;
+	padding-right: 30px;
+}
+footer{
+	background-color: #808080;
+	color: #ffffff;
+	padding-top: 10px;
+	padding-bottom: 1px;
+}
+.container{
+	display: flex;
+}
