@@ -6,9 +6,14 @@
 </head>
 <body>
 	<script type="text/javascript">
-		function printMenu(array1){
-			for (var i = 0; i < array1.length; i++) {
-				var a = `
+
+		var a ="";
+		printMenu(a);
+		console.log(a);
+
+		function printMenu(){
+			for (var i = 0; i < 4; i++) {
+				a += `
 					<div class="col-md-3 col-12 item">
 						<article >
 							<a href="">
@@ -23,11 +28,11 @@
 						</article>
 					</div>
 				`;
-				console.log(a)
+				
 			}
+			return a;
 		}
 		
-		printMenu([0, 1, 2, 3]);
 	</script>
 
 

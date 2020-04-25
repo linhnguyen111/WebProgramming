@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = createPerson2("Nguyen Thi Ngoc","Linh");
+		a.toString();
+
+		function createPerson(firstName, lastName){
+			var person = {
+				// firstName: ,
+				// lastName: ,
+
+			};
+			person.firstName = firstName;
+			person.lastName = lastName;
+			person.toString = function(){
+				console.log(person.firstName);
+			};
+			return person;
+		}
+
+		function createPerson2(firstName, lastName){
+			// var person = {
+				
+			// };
+			// person.firstName = firstName;
+			// person.lastName = lastName;
+			// person.toString = function(){
+			// 	console.log(person.firstName);
+			// };
+			return {
+
+				firstName : firstName,
+				lastName : lastName,
+
+				toString : function(){
+					console.log(this.firstName);
+				}
+			};
+		}
+	</script>
+</body>
+</html>

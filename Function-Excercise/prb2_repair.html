@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jkkkk</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		var a = ["Linh","Long","Lan"];
+		deleteArray(a,"Long");
+		console.log(a);
+		function deleteArray(a,key){
+			for (var i = 0; i < a.length; i++) {
+				if (a[i] === key) {
+					a.splice(i,1);
+				}
+			}
+		}
+	</script>
+</body>
+</html>
