@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">#</th>
+	      <th scope="col">First</th>
+	      <th scope="col">Last</th>
+	      <th scope="col">Funtion</th>
+	    </tr>
+	  </thead>
+
+	  <tfoot>
+	  	<tr>
+	      <th scope="row"></th>
+	      <td><input type="" id="fname"></td>
+	      <td><input type="" id="lname"></td>
+	      <td><button type="button" id="addRow" class="btn btn-link">Thêm</button></td>
+	  	</tr>
+	  </tfoot>
+
+	  <tbody>
+	    <tr>
+	      <th scope="row">1</th>
+	      <td>Mark</td>
+	      <td>Otto</td>
+	      <td><button type="button" id="selected" class="btn btn-link">Xóa</button></td>
+	    </tr>
+	    <tr>
+	      <th scope="row">2</th>
+	      <td>Jacob</td>
+	      <td>Thornton</td>
+	      <td><button type="button" id="selected" class="btn btn-link">Xóa</button></td>
+	    </tr>
+	    <tr>
+	      <th scope="row">3</th>
+	      <td>Larry</td>
+	      <td>the Bird</td>
+	      <td><button type="button" id="selected" class="btn btn-link">Xóa</button></td>
+	    </tr>
+	  </tbody>
+	</table>
+
+	<script type="text/javascript" >
+
+		// $('.table tbody').on('click','#selected', function(){
+		// 	$(this).parents('tr').remove();
+		// });
+
+		$('#addRow').click(function(){
+			var firstname = $('#fname').val();
+			var lastname = $('#lname').val();
+			var markup = `
+				<tr>
+			      <th scope="row"></th>
+			      <td>${firstname}</td>
+			      <td>${lastname}</td>
+			  	</tr>`;
+			$('.table').append(markup);
+
+			// $('.table').append("<tr><td></td><td>"+firstname+"</td><td>"+lastname+"</td></tr>");
+		});
+	</script>
+</body>
+</html>
