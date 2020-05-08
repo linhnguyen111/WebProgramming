@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exc</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		let text = `George is studying Javascript at Telerik Academy, 
+		while Jimmy goes to Telerik Kids Academy`;
+
+		let academyRegex = /Telerik\s(software\s)?academy/gi;
+
+		let isMatch = academyRegex.test(text);
+
+		let matches = text.match(academyRegex);
+
+		while(currentMatch = academyRegex.exec(text)){
+			console.log(currentMatch);
+		}
+	</script>
+</body>
+</html>
