@@ -1,0 +1,35 @@
+.music{
+	background-color: #eeeeee;
+	width: 800px;
+
+	padding: 25px 25px 25px;
+	border-radius: 10px;
+	margin: 20px 250px;
+}
+article{
+	padding-bottom: 30px;
+}
+.row{
+	background-color: #ffffff;
+	border: solid 2px #dfdfdf;
+}
+img{
+	width: 250px;
+	padding: 15px 10px ;
+}
+p{
+	padding-top: 15px;
+}
+.b{
+	padding-left: 200px;
+}
+.listen{
+	background-image: url("./img/listen.png");
+	width: 80px;
+	color:#ffffff;
+}
+.add{
+	background-image: url("./img/add.png");
+	width: 80px;
+	color:#ffffff;
+}
