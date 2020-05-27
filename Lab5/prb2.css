@@ -1,0 +1,36 @@
+#a{
+			border-top: 5px solid #865AA8;
+			border-bottom: 5px solid #865AA8;
+		}
+		h5{
+			color: #865AA8;
+		}
+		p{
+			color: #7C8792;
+		}
+		hr{
+			border-color: #865AA8 ;
+			border-width: 5px;
+			width: 15%;
+			margin-left: 0px;
+		}
+		li{
+			list-style-type: none;
+			margin-bottom: 10px;
+			color: #7C8792;
+
+		}
+		.icon{
+			display: inline-block;
+		}
+		#b{
+			background-color: #F8F8F8;
+		}
+		.f{
+			background-color:#2C3E50 ;
+			color: #fff;
+			text-align: center;
+		}
+		table{
+			color: #7C8792;
+		}

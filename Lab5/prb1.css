@@ -1,0 +1,109 @@
+.address{
+			color:#fff;
+			padding: 10px 0px;
+		}
+		#a{
+			background-color: #253443;
+		}
+		.name{
+			color: purple;
+			text-align: center;
+			font-family: Brush Script MT;
+			font-size: 55px;
+		}
+		.website-add{
+			color: purple;
+			text-align: center;
+			font-family: Calibri;
+			font-size: 25px;
+			/*padding-top: 5px;*/
+		}
+
+		input{
+			background-image: url("./img/hinh1.png");
+			background-position: right;
+			background-repeat: no-repeat;
+			background-size: 30px;
+			width: 200px;
+			padding-right: 30px;
+			padding-bottom: 10px;
+			border: 1px solid #ccc;
+		}
+		input:focus{
+			width: 300px;
+		}
+		.label-gia{
+			color: red;
+		}
+		.label{
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		li:hover ul{
+			display: block;
+			color: #ffffff;
+		}
+		
+		nav li{
+			display: inline-block;
+			list-style-type: none;
+			padding: 15px 15px;
+			/*position: absolute;*/
+		}
+		li ul{
+			display: none;
+		}
+		
+		ul{
+			background-color: #fff;
+			width: 200px;
+			text-align: left;
+			padding-left: 10px;
+		}
+		.a{
+			background-color: #652D92;
+			text-align: center;
+
+		}
+		a{
+			list-style-type: none;
+			color: #ffffff;
+			padding: 20px 20px;
+
+		}
+
+		li:hover >a{
+			background-color: #753AA7;
+			color:#fff;
+			text-decoration: none;
+
+		}
+
+		.d{
+			position: absolute;
+		}
+		ul li{
+			color:#652D92;
+		}
+		li:hover{
+			background-color: #652D92;
+			color:#fff;
+		}
+		.tieude{
+			background-image: url("./img/flower6.jpg");
+			padding-top: 150px;
+			padding-bottom: 20px;
+			padding-left: 50px;
+		}
+		.giam{
+			color:purple;
+			font-size: 30px;
+		}
+		.number{
+			color:red;
+			font-size: 50px;
+		}
+		.ngay{
+			color:#627270;
+			font-size: 30px;
+		}
