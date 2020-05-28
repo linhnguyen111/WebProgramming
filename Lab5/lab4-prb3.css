@@ -1,0 +1,54 @@
+body{
+			background-color: #A326D1;
+			color:#fff;
+		}
+		.logo{
+			font-family: magneto;
+			font-size: 70px;
+		}
+		input{
+			border-radius: 10px;
+			background-color: #A326D1;
+		}
+		.home{
+			list-style-type: none;
+			display: inline-block;
+			padding-left: 20px;
+		}
+		.menu{
+			border:1px solid black;
+			border-radius: 10px;
+			padding-top: 10px;
+		}
+		.noidung{
+			border:1px solid black;
+			border-radius: 10px;
+			margin-top: 20px;
+
+		}
+		@font-face{
+			font-family: Edwardian Script ITC;
+			src: url("../Lab 4 - Attached Source Code/Problem 1 - Font/EdwardianScriptITC.ttf");
+		}
+
+		p{
+			font-family: Consolas;
+			font-size: 10px;
+		}
+
+		.p1:first-letter{
+			font-family: Edwardian Script ITC;
+			font-size: 2.9em;
+		}
+		.author{
+			padding-left: 600px;
+		}
+		.fod{
+			text-align: center;
+		}
+		strong{
+			color:#ccc;
+		}
+		.Widget{
+			font-family: Consolas;
+		}
