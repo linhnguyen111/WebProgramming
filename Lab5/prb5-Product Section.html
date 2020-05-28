@@ -21,6 +21,7 @@
 			margin-left: auto;
 			margin-right: auto;
 			width: 200px;
+			backface-visibility: hidden;
 		}
 		.danhmuc{
 			border:1px solid grey;
@@ -34,11 +35,38 @@
 		}
 		.baogom{
 			text-align: center;
+			position: relative;
 		}
 		hr{
 			margin-top: 0px;
 			width: 70%;
 			margin-left:0px;
+		}
+		.text{
+			background-color: orange;
+		    color: white;
+		    font-size: 16px;
+		    padding: 16px 16px;
+		    margin-bottom: 10px;
+		}
+		.danhmuc{
+			
+		}
+		.middle{
+			position: absolute;
+		}
+		.danhmuc:hover .sanpham{
+			opacity: 0.3
+		}
+		.danhmuc:hover .middle{
+			opacity: 1;
+		}
+		.sanpham{
+			opacity: 1;
+		}
+		.middle{
+			opacity: 0;
+			margin: 10px 10px;
 		}
 	</style>
 </head>
@@ -51,11 +79,15 @@
 				<div class="col-md-6">
 					<div class="baogom">
 						<div class="danhmuc">
-							<img src="./img/maytinh.jpg" alt="maytinh"  class="sanpham" style="">
+							<img src="./img/maytinh.jpg" alt="maytinh"  class="sanpham">
+							<div class="middle">
+								<div class="text">ĐẶT HÀNG</div>
+								<div class="text">CHI TIẾT</div>
+							</div>
 						</div>
-						<h5>Tổng đài Ip Xcomaoufao</h5>
-						<b>Vui lòng gọi(541)584641664</b>
 					</div>
+					<h5>Tổng đài Ip Xcomaoufao</h5>
+					<b>Vui lòng gọi(541)584641664</b>
 					
 				</div>
 				<div class="col-md-6">
