@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reverse number</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="text" id="prime" placeholder="Nhập số">
+	<button type="button" onclick="result()">show</button>
+	<script type="text/javascript">
+		function result(){
+			var n = document.getElementById("prime").value;
+			var arrayn = n.split("");
+			var result = 0;
+			for (var i = n.length - 1; i >=0; i--) {
+				document.write(arrayn[i]);
+			}
+		}
+	</script>
+</body>
+</html>

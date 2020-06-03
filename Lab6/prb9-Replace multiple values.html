@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Replace multiple values</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="text" id="prime" placeholder="Nhập chuỗi">
+	<input type="text" id="word" placeholder="nhập chuỗi cần thay đổi">
+	<button type="button" onclick="result()">show</button>
+	<script type="text/javascript">
+		function result(){
+			var n = document.getElementById("prime").value;
+			var arrayn = n.split("");
+			var word = document.getElementById("word").value;
+			var arrayword = word.split("");
+			var result = 0;
+			for (var i = 0; i < arrayn.length; i++) {
+				for (var j = 0; j < arrayword.length; j++) {
+					if (arrayword[j] == arrayn[i]) {
+						arrayn[i] = arrayword[j].toLocaleUpperCase();
+					}
+				}
+			}
+			
+
+			for (var i = 0; i < arrayn.length; i++) {
+				console.log(arrayn[i]);
+			}
+		}
+	</script>
+</body>
+</html>

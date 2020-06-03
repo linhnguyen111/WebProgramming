@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selected Sort</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="text" id="prime" placeholder="Nhập số">
+	<button type="button" onclick="result()">show</button>
+	<script type="text/javascript">
+		function result(){
+			var n = document.getElementById("prime").value;
+			var array = n.split(" ");
+			var result = 0;
+			for (var i = 0; i < array.length; i++) {
+				for (var j = i+1 ; j <= array.length; j++) {
+					if (array[j]<array[i]) {
+						result = array[j];
+						array[j] = array[i];
+						array[i] = result
+					}
+				}
+			}
+			for (var k = 0; k < array.length; k++) {
+				console.log(array[k]+" ");
+			}
+			
+		}
+	</script>
+</body>
+</html>

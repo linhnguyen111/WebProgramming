@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parsing Number</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>str</th>
+			<th>parseInt(str)</th>
+			<th>parseFloat(str)</th>
+			<th>Number(str)</th>
+			<th>+str</th>
+			<th>str|0</th>
+		</tr>
+		<tr>
+			<td>'123'</td>
+			<td><p id="int"></p></td>
+			<td><p id="float"></p></td>
+			<td><p id="number"></p></td>
+			<td><p id="str"></p></td>
+			<td><p id="str|0"></p></td>
+		</tr>
+		<tr>
+			<td>'1238abc'</td>
+			<td><p id="int2"></p></td>
+			<td><p id="float2"></p></td>
+			<td><p id="number2"></p></td>
+			<td><p id="str2"></p></td>
+			<td><p id="str|02"></p></td>
+		</tr>
+		<tr>
+			<td>'0.15'</td>
+			<td><p id="int3"></p></td>
+			<td><p id="float3"></p></td>
+			<td><p id="number3"></p></td>
+			<td><p id="str3"></p></td>
+			<td><p id="str|03"></p></td>
+		</tr>
+		<tr>
+			<td>'3.14ivan'</td>
+			<td><p id="int4"></p></td>
+			<td><p id="float4"></p></td>
+			<td><p id="number4"></p></td>
+			<td><p id="str4"></p></td>
+			<td><p id="str|04"></p></td>
+		</tr>
+		<tr>
+			<td>'Infinity'</td>
+			<td><p id="int5"></p></td>
+			<td><p id="float5"></p></td>
+			<td><p id="number5"></p></td>
+			<td><p id="str5"></p></td>
+			<td><p id="str|05"></p></td>
+		</tr>
+		<tr>
+			<td>'9999999999999999999999999999'</td>
+			<td><p id="int6"></p></td>
+			<td><p id="float6"></p></td>
+			<td><p id="number6"></p></td>
+			<td><p id="str6"></p></td>
+			<td><p id="str|06"></p></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		document.getElementById("int").innerHTML = parseInt('123');
+		document.getElementById("float").innerHTML = parseFloat('123');
+		document.getElementById("number").innerHTML = Number('123');
+		document.getElementById("str").innerHTML = +('123');
+		document.getElementById("str|0").innerHTML = ('123') | 0;
+
+		document.getElementById("int2").innerHTML = parseInt('1238abc');
+		document.getElementById("float2").innerHTML = parseFloat('1238abc');
+		document.getElementById("number2").innerHTML = Number('1238abc');
+		document.getElementById("str2").innerHTML = +('1238abc');
+		document.getElementById("str|02").innerHTML = ('1238abc') | 0;
+
+		document.getElementById("int3").innerHTML = parseInt('0.15');
+		document.getElementById("float3").innerHTML = parseFloat('0.15');
+		document.getElementById("number3").innerHTML = Number('0.15');
+		document.getElementById("str3").innerHTML = +('0.15');
+		document.getElementById("str|03").innerHTML = ('0.15') | 0;
+
+		document.getElementById("int4").innerHTML = parseInt('3.14ivan');
+		document.getElementById("float4").innerHTML = parseFloat('3.14ivan');
+		document.getElementById("number4").innerHTML = Number('3.14ivan');
+		document.getElementById("str4").innerHTML = +('3.14ivan');
+		document.getElementById("str|04").innerHTML = ('3.14ivan') | 0;
+
+		document.getElementById("int5").innerHTML = parseInt('Infinity');
+		document.getElementById("float5").innerHTML = parseFloat('Infinity');
+		document.getElementById("number5").innerHTML = Number('Infinity');
+		document.getElementById("str5").innerHTML = +('Infinity');
+		document.getElementById("str|05").innerHTML = ('Infinity') | 0;
+
+		document.getElementById("int6").innerHTML = parseInt('9999999999999999999999999999');
+		document.getElementById("float6").innerHTML = parseFloat('9999999999999999999999999999');
+		document.getElementById("number6").innerHTML = Number('9999999999999999999999999999');
+		document.getElementById("str6").innerHTML = +('9999999999999999999999999999');
+		document.getElementById("str|06").innerHTML = ('9999999999999999999999999999') | 0;
+	</script>
+</body>
+</html>

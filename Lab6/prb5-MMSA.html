@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MMSA</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="text" id="prime" placeholder="Nhập 1 dãy số">
+	<button type="button" onclick="show_result()">show</button>
+	<script type="text/javascript">
+		function show_result(){
+			var n = document.getElementById("prime").value;
+			var array = n.split(" ");
+			var min = parseInt(array[0]);
+			var max = parseInt(array[0]);
+			var avergare = 0;
+			var sum = 0;
+			for (var i = 0; i < array.length; i++) {
+				var number = parseInt(array[i]);
+				if (min > number) {
+					min = number;
+				}
+
+				if (max < number) {
+					max = number;
+				}
+
+				sum += number;
+				avergare = sum / array.length;
+			}
+			for (var k = 0; k < array.length; k++) {
+				console.log(sum+" "+min+" "+max+" "+avergare);
+			}
+		}
+	</script>
+</body>
+</html>
