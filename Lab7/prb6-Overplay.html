@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Overplay</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#text{
+			position: absolute;
+			width: 200px;
+			margin: 200px 600px;
+			background-color: #fff;
+			border-radius: 10px;
+			padding: 20px 20px;
+		}
+		#overplay{
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: grey;
+			display: none;
+			opacity: 0.7;
+		}
+		#click{
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<div id="overplay" >
+		<form id="text">
+			<h2>Fade & scale example</h2>
+			<fieldset>
+				<p>iahfiuhwerufqifbhabdv ajhvbajf</p>
+			</fieldset>
+			<br>
+			<fieldset>
+				<p>suhfaiufgafbahfbdjvab djvhbjhsba</p>
+			</fieldset>
+			<br>
+			<div class="button">
+				<input type="button" name="" value="Next example">
+				<input type="button" name="" value="close" onclick="off()">
+			</div>
+		</form>
+	</div>
+
+	<button onclick="on()" id="click">Click</button>
+
+
+	<script type="text/javascript">
+		function on(){
+			document.getElementById("overplay").style.display ="block";
+		}
+
+		function off(){
+			document.getElementById("overplay").style.display ="None";
+		}
+		
+	</script>
+</body>
+</html>

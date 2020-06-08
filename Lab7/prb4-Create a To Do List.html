@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create a To Do List</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
+	<style type="text/css">
+		.title{
+			background-color: blue;
+			width: 400px;
+			color:#fff;
+			padding: 20px 20px;
+			margin-left: 500px;
+		}
+		li{
+			list-style-type: none;
+			position: relative;
+			margin-left: 500px;
+		}
+		span{
+			position: absolute;
+			top: 0;
+			right: 500px;
+	</style>
+</head>
+
+<body>
+	<form>
+		<div class="title">
+			<p>My To Do List</p>
+			<input type="text" name="" placeholder="Title" id="input">
+			<input type="button" name="" value="Add" id="addlst">
+		</div>
+
+		<div>
+			<ul class="list">
+				<li>Hit the gym <span class="del">x</span></li>
+			</ul>
+			
+		</div>
+	</form>
+	<script type="text/javascript">
+		$('#addlst').click(function(){
+			var title = $('#input').val();
+			var makup = `<li>${title}<span class="del">x</span></li>`;
+			$('.list').append(makup);
+		})
+
+		$('.list').on('click','.del',function(){
+			$(this).parents('li').remove();
+		})
+	</script>
+</body>
+</html>

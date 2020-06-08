@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alert Message</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.danger{
+			background-color: red;
+			color:#fff;
+			padding: 20px 20px;
+			margin: 20px 0;
+		}
+		.sucess{
+			background-color: green;
+			color:#fff;
+			padding: 20px 20px;
+			margin: 20px 0;
+		}
+		.info{
+			background-color: blue;
+			color:#fff;
+			padding: 20px 20px;
+			margin: 20px 0;
+		}
+		.warning{
+			background-color: orange;
+			color:#fff;
+			padding: 20px 20px;
+			margin: 20px 0;
+		}
+		span i{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="danger">
+		<strong>Danger!</strong> Indicates iahfaf knafuhfe ajdnkvkjab akjd
+		<span class="closebtn" ><i class="fa fa-times" aria-hidden="true"></i></span>
+	</div>
+
+	<div class="sucess">
+		<strong>Sucess!</strong> Indicates iahfaf knafuhfe ajdnkvkjab akjd
+		<span class="closebtn"><i class="fa fa-times" aria-hidden="true"></i></span>
+	</div>
+
+	<div class="info">
+		<strong>Info!</strong> Indicates iahfaf knafuhfe ajdnkvkjab akjd
+		<span class="closebtn"><i class="fa fa-times" aria-hidden="true"></i></span>
+	</div>
+
+	<div class="warning">
+		<strong>Warning!</strong> Indicates iahfaf knafuhfe ajdnkvkjab akjd
+		<span class="closebtn"><i class="fa fa-times" aria-hidden="true"></i></span>
+	</div>
+
+	<script type="text/javascript">
+		var x = document.getElementsByClassName("closebtn");
+		for (var i = 0; i < x.length; i++) {
+			x[i].onclick = function(){
+				var div = this.parentElement;
+				div.style.display = "none";
+			}
+		}
+	</script>
+</body>
+</html>

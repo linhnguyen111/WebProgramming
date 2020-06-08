@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<style>
+		.container {
+		  position: relative;
+		  display: none;
+		}
+		#textimg {
+		  position: absolute;
+		  bottom: 15px;
+		  left: 15px;
+		  color: white;
+		  font-size: 50px;
+		}
+		.closebtn {
+		  position: absolute;
+		  top: 10px;
+		  right: 40px;
+		  color: white;
+		  font-size: 35px;
+		}
+
+		img{
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="row">
+	  <div class="col-md-3">
+	    <img src="./img/natures.jpg" alt="Nature"  onclick="myFunction(this);">
+	  </div>
+	  <div class="col-md-3">
+	    <img src="./img/snows.jpg" alt="Snow"  onclick="myFunction(this);">
+	  </div>
+	  <div class="col-md-3">
+	    <img src="./img/moutants.jpg" alt="Mountain"  onclick="myFunction(this);">
+	  </div>
+	  <div class="col-md-3">
+	    <img src="./img/lights.jpg" alt="Light"  onclick="myFunction(this);">
+	  </div>
+	</div>
+
+	<div class="container">
+	  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+	  <img id="mainimg">
+	  <div id="textimg"></div>
+	</div>
+
+	<script>
+		function myFunction(imgs){
+			var main_img = document.getElementById("mainimg");
+			var imgtext = document.getElementById("textimg");
+			main_img.src = imgs.src;
+			imgtext.innerHTML = imgs.alt;
+			main_img.parentElement.style.display = "block";
+		}
+	</script>
+</body>
+</html>
