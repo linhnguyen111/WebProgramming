@@ -1,0 +1,319 @@
+.logo{
+	width: 120px;
+}
+
+a{
+	text-decoration: none !important;
+}
+#maCk{
+	font-size: 12px;
+}
+
+.boderRight{
+	border-right: 1px dotted grey;
+	color: #797979;
+	text-align: center;
+	width: 25%;
+}
+.pad{
+	margin: 0 auto;
+	width: 80%;
+	
+}
+.hd{
+	-webkit-box-shadow:0 8px 6px -6px lightgrey;
+}
+.dropdown{
+	padding-left: 10px;
+}
+
+.linkborder{
+	width: 150px;
+	color: #797979;
+	padding: 2px 10px;
+	margin: 20px 20px;
+	border:1px solid #797979;
+	font-size:13px;
+	border-radius: 10px
+
+}
+.letter-icon{
+	margin-left: 10px; 
+	color: #797979;
+}
+.pad2{
+	padding-top: 20px;
+	margin: 0 auto;
+	width: 80%;
+}
+.read-fast{
+	float: right;
+	right: 0px;
+	color: #666;
+}
+.time{
+	border-bottom: 1px solid #f2f2f2;
+	 padding-bottom: 10px; 
+	 margin-bottom: 10px;
+}
+
+.TinmoiLi{
+	font-size: 12px;
+	line-height: 16px;
+	color: #0b75b1;
+	white-space: normal;
+	display: inline-block;
+	font-family: Arial;
+	padding-top: 1px;
+	font-weight: bold;
+	border-left: 1px solid #f2f2f2; 
+	padding-left: 15px;
+}
+.new{
+	width: 480px;
+}
+#scoll{
+	height: 200px;
+	width: 480px;
+	overflow: auto;
+}
+table{
+	width: 100px; 
+	font-size: 12px;
+}
+.pad3{
+	margin: 0 auto;
+	width: 80%;
+}
+.menu-chinh{
+	background-color: #004370;
+}
+
+.next-head{
+	height: 100px; 
+	text-align: center;
+	 background-color: #f2f2f2;
+}
+
+.tieude{
+	font-size: 23px;
+	color: #1c1c1c;
+	font-family: Roboto-Bold;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 10px;
+	line-height: 30px;
+}
+.li-tieude{
+	color:black;
+	font-size: 12px;
+}
+#main1{
+	background-color: #ECF8FF;
+}
+.group-img1{
+	width: 100%;
+}
+#top_event{
+	background-color: #2a3346;
+	padding: 10px 0; 
+	margin-bottom: 20px;
+	color: white;
+}
+.letter-top-event{
+	padding-right: 20px;
+}
+.tieude2{
+	color: #404957;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 22px;
+}
+.magazine{
+	border-radius: 5px;
+	border:1px solid grey;
+	background-color: #F0F1F5; 
+	font-size: 12px;
+	color:#666;
+}
+.tieude3{
+	border-top: 1px dotted grey;
+}
+hr{
+	width: 60%;
+	margin-left: 0px;
+	border-color: #E25354 ;
+	border-width: 5px;
+	margin-top: 10px;
+}
+.enterprise{
+	background-color: #162837;
+	padding: 20px 20px;
+}
+.dn{
+
+}
+.sp{
+	color: #222; 
+	font-size: 20px; 
+	height: 40px; 
+	font-weight: 700;
+}
+.chungkhoan{
+	border-radius: 5px;
+	border: 1px dotted grey;
+	box-shadow: 0px 5px 0px 0px #F2F2F2;
+	margin: 10px 0px;
+}
+.dn{
+	color: white; 
+	font-size: 20px;
+	height: 40px; 
+	font-weight: 700; 
+}
+.lst-doanhnghiep{
+	padding-left: 5px; 
+	list-style-type: none;
+}
+.sub-lst-doanhnghiep{
+	border-bottom: 1px dotted grey; 
+	padding-bottom: 10px;
+}
+li > h6{
+	font-weight: bold;
+	padding: 10px 15px;
+}
+.sub-lst-chungkhoan{
+	border-top:1px dotted grey;
+	padding: 10px 15px
+}
+form{
+	background-color: #E6E8EC;
+	padding: 10px 10px;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+.chuyengia{
+	background-color: #E9F2F8;
+	margin:10px 10px;
+}
+.tacgia{
+	font-size: 10px;
+	padding-bottom: 0px;
+}
+#textimg{
+	padding-left: 30px;
+	width:80px;
+}
+
+
+
+
+.fot1{
+	padding-top: 20px;
+	margin: 0 auto;
+	width: 80%;
+}
+.adress{
+	background-color: #F2F4F8;
+}
+.ad{
+	border-right: 1px dotted #666;
+}
+.law{
+	background-color: #eaedf2;
+}
+.fot2{
+	margin: 0 auto;
+	width: 80%;
+}
+
+menu{
+	background-color: black;
+	color:#fff;
+}
+
+.menu a{
+	color: #fff;
+	padding: 10px 3px;
+	display: inline-block;
+	font-size: 15px;
+}
+.menu a:hover{
+	background-color: #0064A6;
+}
+.active{
+	background-color: #0064A6;
+}
+.menu .icon{
+	display: none;
+}
+.cal{
+	width: 320px;
+}
+
+.video{
+	background-color: #101C28;
+	margin-bottom: 20px;
+}
+.video-pad{
+	margin:0 auto;
+	width: 80%;
+}
+.video-first{
+	width:600px;
+	height: 400px;
+	padding: 5px 0px;
+}
+.lst-video{
+	width: 150px;
+}
+.tieude-video{
+	width: 200px;
+	padding-left: 10px;
+	color:#fff;
+	font-size: 15px;
+}
+.hr-video{
+	border:0.5px solid #0B5384;
+	width: 100%;
+	margin-top: 50px;
+}
+@media screen and (max-width: 600px){
+	.menu{
+		position: relative;
+	}
+
+	/*Ẩn menu*/
+	.menu a:not(:first-child){
+		display: none;
+	}
+
+	/*Hiện menu*/
+	.menu.reponsive a{
+		display: block;
+	}
+
+	.menu .icon{
+		display: block !important;
+		position: absolute;
+		top:0; 
+		right: 0;
+	}
+	.logo{
+		width: 300px;
+	}
+	.new{
+		width: 250px;
+	}
+
+	#scoll{
+		width: 250px;
+		overflow: auto;
+	}
+
+
+	.cal{
+		display: none;
+	}
+}
