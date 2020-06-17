@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Management System</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<style type="text/css">
+		
+	</style>
+
+</head>
+<body>
+	<header>
+		<h1>Student Management System</h1>
+	</header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3 lst">
+				<div>
+					Class List
+				</div>
+				<div>
+					<ul class="Danhsach">
+						<!-- <li>Lớp 1</li>
+						<li>Lớp 2</li>
+						<li>Lớp 3</li>
+						<li>Lớp 4</li> -->
+
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-9 tbl">
+				<div class="card">
+				  <div class="card-header">
+				    Edit student's information
+				  </div>
+				  <div class="card-body">
+					    <input type="text" name="number" placeholder="2230" id="std-number">
+						<input type="text" name="name" placeholder="Nguyễn Văn A" id="std-name">
+						<input type="text" name="adress" placeholder="@student.com" id="std-adress">
+						<select id="class">
+							<option>Lớp 1</option>
+							<option>Lớp 2</option>
+							<option>Lớp 3</option>
+						</select>
+						<input type="button" name="update" value="Update" id="Add">
+				  </div>
+
+				  <input type="text" name="" id="seac">
+
+				   <div class="card-header">
+				     Student List
+				   </div>
+				  <div class="card-body">
+					    <table class="group-list">
+					    	<tr>
+					    		<th>#</th>
+					    		<th>Full name </th>
+					    		<th>Student ID</th>
+					    		<th>Function</th>
+					    	</tr>
+					    </table>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var DSs;
+		var DSLop;
+
+
+		// load bảng chính
+		$(document).ready(function(){
+			$.get(
+				"http://66.42.50.227/data-ajax.php",
+				{
+					"GetProducts":"All"
+				},
+
+			).done(function(data){
+				DSs=JSON.parse(data);
+				console.log(DSs)
+				DSs.sort(function(a,b){
+					if (a.Name > b.Name) return 1;
+					if (a.Name < b.Name) return -1;
+					return 0;
+				});
+				showProduct()
+			});
+		});
+
+		// load dữ liệu bàng phụ
+		$(document).ready(function(){
+			$.get(
+				"http://66.42.50.227/data-ajax.php",
+				{
+					"GetProducts":"Brand"
+				},
+
+			).done(function(data){
+
+				DSLop=JSON.parse(data);
+				console.log(DSLop);
+				for (var i = 0; i < DSLop.length; i++) {
+					$(".Danhsach").append(`<li data-id="${DSLop[i].BrandCode}">${DSLop[i].BrandName}</li>`)
+				}
+				// console.log(DSLop);
+			});
+		});
+
+		// Xóa
+		$(".group-list").on("click",".Del",function(){
+			var _confirm = confirm("Are you sure?");
+			if (_confirm) {
+				var _id =$(this).attr("id");
+				for (var i = 0; i < DSs.length; i++) {
+					if(DSs[i].Code == _id){
+						DSs.splice(i,1);
+						break;
+					}
+				}
+
+				showProduct()
+			}
+			
+		})
+
+		
+
+		// Hiển thị
+		$(".Danhsach").on("click","li",function(){
+			var _brandcode = $(this).attr("data-id");
+			console.log(_brandcode);
+			// console.log(Z);
+			$(".group-list tbody").html("");
+			var index= 0;
+			for (var i = 0; i < DSs.length; i++) {
+				if (DSs[i].CateCode == _brandcode) {
+					$(".group-list tbody").append(`<tr>
+				    		<td>${index+1}</td>
+				    		<td>${DSs[i].Name}</td>
+				    		<td>${DSs[i].Code}</td>
+				    		<td>
+				    			<input type="button" name="" value="Edit" >
+				    			<input type="button" name="" value="Delete" id="${DSs[i].Code} class="Del">
+				    		</td>
+				    	</tr>`);
+					index++;
+				}
+				
+			}
+		})
+
+		// thêm
+		$("#Add").click(function(){
+			var number = $("#std-number").val();
+			var name = $("#std-name").val();
+			var adress = $("#std-adress").val();
+			var _attr = $("#Add").text();
+			console.log(number);
+			if (_attr == "update") {
+				for (var i = 0; i < DSs.length; i++) {
+					if (DSs[i].Code == number) {
+						DSs[i].Name = name;
+						DSs[i].Price = adress;
+					}
+				}
+				
+			}else{
+				DSs.unshift(
+					{
+						"Code": number,
+						"Name": name,
+						"Price": adress,
+						"Quantity": 5,
+						"Description": "Đây là một trong những mẫu điện thoại nổi nhất hiện nay của Samsung."
+					}
+
+				);
+
+			}
+			
+			showProduct();
+		})
+
+		//Edit
+		$(".group-list tbody").on("click",".edit",function(){
+			var _id = $(this).attr("id");
+			for (var i = 0; i < DSs.length; i++) {
+				if(DSs[i].Code == _id){
+					console.log(_id);
+					$("#std-name").val(DSs[i].Name);
+					$("#std-number").val(DSs[i].Code);
+					$("#Add").text("update");
+				}
+			}
+		})
+
+
+		// table products
+		function showProduct(){
+			$(".group-list tbody").html("");
+			for (var i = 0; i < DSs.length; i++) {
+				
+				$(".group-list tbody").append(`<tr>
+				    		<td>${i+1}</td>
+				    		<td>${DSs[i].Name}</td>
+				    		<td>${DSs[i].Code}</td>
+				    		<td>
+				    			<input type="button" name="" value="Edit" id=${DSs[i].Code} class="edit">
+				    			<input type="button" name="" value="Delete" id=${DSs[i].Code} class="Del">
+				    		</td>
+				    	</tr>`);
+			}
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responesive Navigation</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<style type="text/css">
+		.menu{
+			background-color: black;
+			color:#fff;
+		}
+
+		.menu a{
+			color: #fff;
+			padding: 15px 15px;
+			display: inline-block;
+		}
+		.active{
+			background-color: green;
+		}
+		.menu .icon{
+			display: none;
+		}
+		@media screen and (max-width: 600px){
+			.menu{
+				position: relative;
+			}
+
+			/*Ẩn menu*/
+			.menu a:not(:first-child){
+				display: none;
+			}
+
+			/*Hiện menu*/
+			.menu.reponsive a{
+				display: block;
+			}
+
+			.menu .icon{
+				display: block !important;
+				position: absolute;
+				top:0; 
+				right: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<a class="active" href="javascript:void(0)">Home</a>
+		<a href="" >News</a>
+		<a href="" >About</a>
+		<a class="icon" href="javascript:void(0)"><i class="fa fa-bars" aria-hidden="true" style="color:#fff"></i></a>
+	</div>
+	<script type="text/javascript">
+		$().ready(function(){
+				$(".menu").click(function(){
+				$(this).toggleClass("reponsive");
+			})
+		})
+	</script>
+</body>
+</html>

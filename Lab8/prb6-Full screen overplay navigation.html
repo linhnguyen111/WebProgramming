@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Full screen Overplay Navigation</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<style type="text/css">
+		.overplay{
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			background-color: black;
+		}
+
+		.overplay a{
+			color:#fff;
+			display: block;
+			text-decoration: none;
+		}
+
+		.overplay .closebtn{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div  class="overplay" id="myNav">
+		<a href="javascript:void(0)" class="closebtn" onclick="this.parentElement.style.display='none'">x</i></a>
+		<a href="" >News</a>
+		<a href="" >About</a>
+	</div>
+
+	<h2>Fullscreen </h2>
+	<p>Click on the element akjbfaiuhaifgewafgewuafygsuafyg</p>
+	<div >
+		<span id="open" href="" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true" ></i></span>
+	</div>
+
+	<script type="text/javascript">
+		$("#open").click(function(){
+			$("#myNav").css("width","100%");
+		})
+		// function openNav(){
+		// 	document.getElementById("myNav").style.width = "100%";
+		// }
+		// function closeNav(){
+		// 	document.getElementById("myNav").style.width = "0%";
+		// }
+	</script>
+</body>
+</html>
